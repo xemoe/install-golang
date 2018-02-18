@@ -1,0 +1,27 @@
+---
+# variables file for fubarhouse-golang
+
+# Go
+go_install_clean: true
+go_uninstall: false
+go_custom_mirror: https://dl.google.com/go
+go_temporary_dir: /tmp
+
+install_go_bootstrap: false
+
+# Go get
+go_get:
+  - name: gopm
+    url: github.com/gpmgo/gopm
+  - name: golint
+    url: github.com/golang/lint/golint
+go_install: []
+
+# Go basic configurations
+go_version: "1.10"
+GOPATH: /opt/go
+GOROOT: /usr/local/go
+GOROOT_BOOTSTRAP: /opt/go-spaces
+
+shell_profiles:
+  - .go_profile
